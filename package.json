@@ -1,0 +1,33 @@
+{
+  "name": "dom-render-tools",
+  "version": "1.0.0",
+  "description": "DOM render tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.{ts,js}\"",
+    "lint": "eslint --fix --max-warnings 0 --ext .js,.ts ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iCherya/dom-render-tools.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iCherya/dom-render-tools/issues"
+  },
+  "homepage": "https://github.com/iCherya/dom-render-tools#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "prettier": "^2.4.1",
+    "typescript": "^4.5.2"
+  },
+  "files": ["lib/**/*"]
+}
