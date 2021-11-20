@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DOM render tools render function should clean up target container and render provided array of elements 1`] = `
+<div
+  class="root"
+>
+  <span>
+    0
+  </span>
+  <span>
+    1
+  </span>
+  <span>
+    2
+  </span>
+</div>
+`;
+
+exports[`DOM render tools render function should clean up target container and render provided single element 1`] = `
+<div
+  class="root"
+>
+  <div>
+    New child
+  </div>
+</div>
+`;
+
+exports[`DOM render tools render function should do nothing if provided params are not defined 1`] = `
+<div
+  class="root"
+>
+  <div>
+    Initial child
+  </div>
+</div>
+`;
