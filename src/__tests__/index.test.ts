@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import { render } from '../index';
+import { createElement, render } from '../index';
 
 describe('DOM render tools', () => {
   describe('render function', () => {
@@ -45,6 +45,40 @@ describe('DOM render tools', () => {
         '<span>0</span><span>1</span><span>2</span>',
       );
       expect(target).toMatchSnapshot();
+    });
+  });
+
+  describe('createElement function', () => {
+    const { body } = document;
+
+    beforeEach(() => {
+      body.innerHTML = '';
+    });
+
+    it('should create new HTML element', () => {
+      const element = createElement({ tagName: 'div', className: 'root' });
+      body.append(element);
+
+      expect(body.innerHTML).toBe('<div class="root"></div>');
+      expect(body).toMatchSnapshot();
+    });
+
+    it('should create new HTML element with child elements', () => {
+      const element = createElement({
+        tagName: 'div',
+        className: 'root',
+        children: [
+          { tagName: 'span', innerHTML: '1' },
+          { tagName: 'span', innerHTML: '2' },
+          { tagName: 'span', innerHTML: '3' },
+        ],
+      });
+      body.append(element);
+
+      expect(body.innerHTML).toBe(
+        '<div class="root"><span>1</span><span>2</span><span>3</span></div>',
+      );
+      expect(body).toMatchSnapshot();
     });
   });
 });

@@ -1,5 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`DOM render tools createElement function should create new HTML element 1`] = `
+<body>
+  <div
+    class="root"
+  />
+</body>
+`;
+
+exports[`DOM render tools createElement function should create new HTML element with child elements 1`] = `
+<body>
+  <div
+    class="root"
+  >
+    <span>
+      1
+    </span>
+    <span>
+      2
+    </span>
+    <span>
+      3
+    </span>
+  </div>
+</body>
+`;
+
 exports[`DOM render tools render function should clean up target container and render provided array of elements 1`] = `
 <div
   class="root"
