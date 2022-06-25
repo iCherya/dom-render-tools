@@ -8,9 +8,9 @@
 npm install dom-render-tools
 ```
 
-## Usage
+## Utils
 
-### render(renderItems, targetElement);
+### render(renderItems, targetElement)
 
 ```js
 import { render } from 'dom-render-tools';
@@ -27,7 +27,7 @@ const renderItems = [firstChild, secondChild];
 render(renderItems, target);
 ```
 
-### createElement({ tagName, children, ...otherProps });
+### createElement({ tagName, children, ...otherProps })
 
 ```js
 import { createElement } from 'dom-render-tools';
@@ -52,6 +52,28 @@ document.body.append(root);
   <div class="child">2</div>
   <div class="child">3</div>
 </div>;
+```
+
+### qs(selector[, parent])
+
+Just an alias for a native `document.querySelector()`. Uses `document` as default parent element if it's not provided.
+
+```js
+import { qs } from 'dom-render-tools';
+
+qs('.el', parentElement);
+qs('.el');
+```
+
+### qsa(selector[, parent])
+
+Native `document.querySelectorAll()` that returns `Array.prototype` of elements that match the specified selectors. Uses `document` as default parent element if it's not provided.
+
+```js
+import { qsa } from 'dom-render-tools';
+
+qsa('.el', parentElement);
+qsa('.el');
 ```
 
 ## Contributing

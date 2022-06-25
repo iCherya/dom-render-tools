@@ -50,3 +50,23 @@ export const createElement = ({
 
   return newElement;
 };
+
+/**
+ *
+ * @param selector - CSS selector
+ * @param parent - Parent element
+ * @returns Element or null
+ */
+export const qs = (selector: string, parent = document as Element | Document) =>
+  parent.querySelector(selector);
+
+/**
+ *
+ * @param selector - CSS selector
+ * @param parent - Parent element
+ * @returns Array of elements or empty array
+ */
+export const qsa = (
+  selector: string,
+  parent = document as Element | Document,
+) => [...parent.querySelectorAll(selector)];

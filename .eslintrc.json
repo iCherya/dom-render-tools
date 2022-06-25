@@ -22,7 +22,9 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    "implicit-arrow-linebreak": 0,
+    "object-curly-newline": 0
   },
   "settings": {
     "import/resolver": {
